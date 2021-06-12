@@ -40,13 +40,17 @@ function userIn() {
     {
         let userInput = window.prompt("Enter grid size:");
         let uInput = parseInt(userInput);
-        if (uInput >= 1 && uInput <= 64)
-        {
+        
+        if (uInput >= 1 && uInput <= 64) {
             makeGrid(uInput)
+            break; 
+        }
+        if (!prompt()) {
+            makeGrid(16)
             break;
         }
     }
-}
+};
 
 // Refresh
 btn.addEventListener('click', function (e) {
